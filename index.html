@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Resproject</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<script src="js/jquery.js"></script>
+		<script>
+			//Toggle for width display
+			var showWidth = 1;
+
+			if(showWidth == 1){
+				$(document).ready(function(){
+					$(window).resize(function(){
+						var width = $(window).width();
+						document.getElementById('output_width').innerHTML="Window Width: " + width;
+					});
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<div id="output_width"></div>
+		<div id="container">
+			<header class="main-header">
+				<img id="logo" src="images/logo.png" alt="Resproject Logo" />
+				<nav class="main-nav">
+					<ul>
+						<li><a class="active" href="#">Home</a></li>
+						<li><a href="#">Learn</a></li>
+						<li><a href="#">Brainstorm</a></li>
+						<li><a href="#">Create</a></li>
+						<li><a href="#">Collaborate</a></li>
+						<li><a href="#">Teach</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div id="main">
+				<div id="content">
+					<article class="art1">
+						<header class="art-header">
+							<h2 class="title"><a href="#">First Post</a></h2>
+							<span>Created By: Maki Tolentino on August 14, 2014</span>
+						</header>
+						<p>
+							Install Docker on your machine.
+
+							Pull the JHipster Docker image:
+
+							sudo docker pull jdubois/jhipster-docker
+
+							Create a "jhipster" folder in your home directory:
+
+							mkdir ~/jhipster
+
+							Run The docker image, with the following options:
+						</p><p>
+							The Docker "/jhipster" folder is shared to the local "~/jhipster" folder
+							Forward all ports exposed by docker (8080 for Tomcat, 9000 for the Grunt server, 22 for SSHD). In the following example we forward the container 22 port to the host 4022 port, to prevent some port conflicts:
+							sudo docker run -v ~/jhipster:/jhipster -p 8080:8080 -p 9000:9000 -p 4022:22 -t jdubois/jhipster-docker
+
+							You can now connect to your docker container with SSH. You can connect as "root/jhipster" or as "jhipster/jhipster", and we recommand you use the "jhipster" user as some of the tool used are not meant to be run by the root user.
+						</p>
+						<a class="readmore" href="#">Read more</a>
+					</article>
+					<article class="art2">
+						<header class="art-header">
+							<h2 class="title"><a href="#">First Post</a></h2>
+							<span>Created By: Maki Tolentino on August 14, 2014</span>
+						</header>
+						<p>
+							Install Docker on your machine.
+
+							Pull the JHipster Docker image:
+
+							sudo docker pull jdubois/jhipster-docker
+
+							Create a "jhipster" folder in your home directory:
+
+							mkdir ~/jhipster
+						</p><p>
+							Run The docker image, with the following options:
+
+							The Docker "/jhipster" folder is shared to the local "~/jhipster" folder
+							Forward all ports exposed by docker (8080 for Tomcat, 9000 for the Grunt server, 22 for SSHD). In the following example we forward the container 22 port to the host 4022 port, to prevent some port conflicts:
+							sudo docker run -v ~/jhipster:/jhipster -p 8080:8080 -p 9000:9000 -p 4022:22 -t jdubois/jhipster-docker
+
+							You can now connect to your docker container with SSH. You can connect as "root/jhipster" or as "jhipster/jhipster", and we recommand you use the "jhipster" user as some of the tool used are not meant to be run by the root user.
+						</p>
+						<a class="readmore" href="#">Read more</a>
+					</article>
+				</div>
+				<aside id="sidebar">
+					<div class="block">
+						<h2>Top Sidebar</h2>
+					<p>Run The docker image, with the following options:</p>
+					</div>
+					<div class="block">
+						<h2>Mid Sidebar</h2>
+					<p>Run The docker image, with the following options:</p>
+					</div>
+					<div class="block">
+						<h2>Bottom Sidebar</h2>
+					<p>Run The docker image, with the following options:</p>
+					</div>
+					
+				</aside>
+			</div>
+			<div class="clr"></div>
+			<footer id="footer">
+				<p>Copyright &copy; 2014 TestProject </p> 
+			</footer>
+		</div>
+	</body>
+</html>
